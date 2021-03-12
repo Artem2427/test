@@ -24,9 +24,7 @@ with open("acme_worksheet.csv", newline='') as csvfile:
         writer.writerow(["Name / Date", "2020-06-29", "2020-06-30", "2020-07-01",
                         "2020-07-02", "2020-07-03", "2020-07-04", "2020-07-05"])
         i = 0
-        p = 0
         j = 0
-        h = 0
         # for i in range(len(name)):
         #     writer.writerow(name[i])
         ours = []
@@ -78,35 +76,3 @@ with open("acme_worksheet.csv", newline='') as csvfile:
 
 
 
-# for i in range(len(array)):
-#             for i in range(len(name)):
-#             if name[0] in array[i]:
-#                 # for k in range(len(array[i])):
-#                 p += 1
-#                 print(array[i])
-#                 # for date[k] in date:
-#             if date[k] and name[0] in array[i]:
-#                 ours.append(array[i][2])
-
-#                 hol.append(date[k])
-#                 k += 1
-#         print(ours)
-#         print(hol)
-
-#         # print(p)
-#         # print(ours)
-#         k = 0
-#         p = 0
-#         print(date)
-#         for k in range(len(date)):
-#             # print(k)
-#             print(date[k])
-#             if date[k] in hol:
-#                 continue
-#             else:
-#                 print(k)
-#                 ours.insert(k, '0')
-#         print(ours)
-
-#         writer.writerow([name[0], ours[0], ours[1], ours[2],
-#                         ours[3], ours[4], ours[5], ours[6]])
