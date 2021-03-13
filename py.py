@@ -27,8 +27,7 @@ with open("acme_worksheet.csv", newline='') as csvfile:
         j = 0
         # for i in range(len(name)):
         #     writer.writerow(name[i])
-        ours = []
-        hol = []
+        p = 0
         
         for j in range(len(name)):
             k = 0
