@@ -6,7 +6,6 @@ with open("acme_worksheet.csv", newline='') as csvfile:
     name = []
     array = []
     date = []
-
     for row in reader:
         array.append(row)
         if row[1] in date:
@@ -15,7 +14,6 @@ with open("acme_worksheet.csv", newline='') as csvfile:
         if row[0] in name:
             continue
         name.append(row[0])
-
     print(array, "\n")
     print(name, "\n")
     print(date, "\n")
@@ -25,38 +23,20 @@ with open("acme_worksheet.csv", newline='') as csvfile:
                         "2020-07-02", "2020-07-03", "2020-07-04", "2020-07-05"])
         i = 0
         j = 0
-        # for i in range(len(name)):
-        #     writer.writerow(name[i])
         l= 0
-        
         for j in range(len(name)):
-            
             k = 0
             ours = []
             hol = []
             print("k ==", k, "j ===", j, "i ===", i)
             for i in range(len(array)):
-                # if name[j] in array[i]:
-                #     # for k in range(len(array[i])):
-                #     l += 1
-                #     print(array[i])
                 for k in range(len(date)):
-
                     print("k ==", k, "j ===", j, "i ===", i)
                     if date[k] and name[j] in array[i]:
                         ours.append(array[i][2])
-
                         hol.append(date[k])
-                        # i = 0
-            # print(ours,'\n')
-            # print(hol,'\n')
-
-            # print(p)
-            # print(ours)
                 p = 0
-                print(date)
                 for p in range(len(date)):
-                    # print(k)
                     if date[p] in hol:
                         continue
                     else:
