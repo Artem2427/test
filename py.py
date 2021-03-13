@@ -40,32 +40,33 @@ with open("acme_worksheet.csv", newline='') as csvfile:
                 #     # for k in range(len(array[i])):
                 #     l += 1
                 #     print(array[i])
-                #     # for date[k] in date:
-                if date[k] and name[j] in array[i]:
-                    ours.append(array[i][2])
+                for k in range(len(date)):
 
-                    hol.append(date[k])
-                    k += 1
-            print(ours,'\n')
-            print(hol,'\n')
+                    print("k ==", k, "j ===", j, "i ===", i)
+                    if date[k] and name[j] in array[i]:
+                        ours.append(array[i][2])
+
+                        hol.append(date[k])
+                        # i = 0
+            # print(ours,'\n')
+            # print(hol,'\n')
 
             # print(p)
             # print(ours)
-            p = 0
-            print(date)
-            for p in range(len(date)):
-                # print(k)
-                print(date[k])
-                if date[p] in hol:
-                    continue
-                else:
-                    print(p)
-                    ours.insert(p, '0')
-            print(ours)
-
-            writer.writerow([name[j], ours[0], ours[1], ours[2],
-                            ours[3], ours[4], ours[5], ours[6]])
-
+                p = 0
+                print(date)
+                for p in range(len(date)):
+                    # print(k)
+                    if date[p] in hol:
+                        continue
+                    else:
+                        print(p)
+                        ours.insert(p, '0')
+                print(ours)
+                writer.writerow([name[j], ours[0], ours[1], ours[2],
+                                ours[3], ours[4], ours[5], ours[6]])
+                ours = []
+                hol = []
 
 
 
