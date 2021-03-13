@@ -27,23 +27,26 @@ with open("acme_worksheet.csv", newline='') as csvfile:
         j = 0
         # for i in range(len(name)):
         #     writer.writerow(name[i])
-        p = 0
+        l= 0
         
         for j in range(len(name)):
+            
             k = 0
+            i = 0
             ours = []
             hol = []
-            for i in range(len(array)):
-                if name[j] in array[i]:
-                    # for k in range(len(array[i])):
-                    p += 1
-                    print(array[i])
-                    # for date[k] in date:
-                if date[k] and name[j] in array[i]:
-                    ours.append(array[i][2])
-
-                    hol.append(date[k])
-                    k += 1
+            print("k ==", k, "j ===", j, "i ===", i)
+            for  k in  range(len(date)):
+                # if name[j] in array[i]:
+                #     # for k in range(len(array[i])):
+                #     l += 1
+                #     print(array[i])
+                #     # for date[k] in date:
+                
+                for i in range(len(array)):
+                    if date[k] and name[j] in array[i]:
+                        ours.append(array[i][2])
+                        hol.append(date[k])
             print(ours,'\n')
             print(hol,'\n')
 
