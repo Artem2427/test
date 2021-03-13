@@ -32,21 +32,20 @@ with open("acme_worksheet.csv", newline='') as csvfile:
         for j in range(len(name)):
             
             k = 0
-            i = 0
             ours = []
             hol = []
             print("k ==", k, "j ===", j, "i ===", i)
-            for  k in  range(len(date)):
+            for i in range(len(array)):
                 # if name[j] in array[i]:
                 #     # for k in range(len(array[i])):
                 #     l += 1
                 #     print(array[i])
                 #     # for date[k] in date:
-                
-                for i in range(len(array)):
-                    if date[k] and name[j] in array[i]:
-                        ours.append(array[i][2])
-                        hol.append(date[k])
+                if date[k] and name[j] in array[i]:
+                    ours.append(array[i][2])
+
+                    hol.append(date[k])
+                    k += 1
             print(ours,'\n')
             print(hol,'\n')
 
